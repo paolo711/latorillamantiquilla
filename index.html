@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1B1B33, #1B1B33);
+            font-family: 'Arial', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: rgba(1B1B33);
+            border-radius: 10px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(212, 207, 207, 0.3);
+            width: 100%;
+            max-width: 500px;
+            backdrop-filter: blur(2px);
+        }
+
+        .form-title {
+            color: #ecf0f1;
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .form-subtitle {
+            color: #bdc3c7;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            color: #ecf0f1;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="file"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 15px;
+            background: rgba(44, 62, 80, 0.8);
+            border: 2px solid rgba(127, 140, 141, 0.3);
+            border-radius: 8px;
+            color: #ecf0f1;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="password"]:focus,
+        input[type="file"]:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            color: #7f8c8d;
+        }
+
+        .checkbox-group {
+            margin: 25px 0;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            color: #ecf0f1;
+        }
+
+        .checkbox-item input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+            width: auto;
+            accent-color: #3498db;
+        }
+
+        .checkbox-item label {
+            margin-bottom: 0;
+            font-weight: normal;
+            line-height: 1.4;
+            cursor: pointer;
+        }
+
+        .privacy-text {
+            font-size: 14px;
+            color: #ffffff;
+            line-height: 1.4;
+            margin-top: 15px;
+        }
+
+        textarea {
+            min-height: 80px;
+            resize: vertical;
+        }
+
+        select {
+            cursor: pointer;
+        }
+
+        select option {
+            background: #34495e;
+            color: #ecf0f1;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .submit-btn:hover {
+            background: linear-gradient(135deg, #2980b9, #21618c);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        /* File input styling */
+        input[type="file"] {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        /* Custom scrollbar for textarea */
+        textarea::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        textarea::-webkit-scrollbar-track {
+            background: rgba(44, 62, 80, 0.5);
+            border-radius: 4px;
+        }
+
+        textarea::-webkit-scrollbar-thumb {
+            background: #7f8c8d;
+            border-radius: 4px;
+        }
+
+        textarea::-webkit-scrollbar-thumb:hover {
+            background: #95a5a6;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1 class="form-title">Registration Form</h1>
+        <p class="form-subtitle">Please fill out this form with the required information</p>
+        
+        <form id="registrationForm">
+            <div class="form-group">
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Create Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+
+            <div class="checkbox-group">
+                <div class="checkbox-item">
+                    <input type="checkbox" id="program" name="program" required>
+                    <label for="program">Program</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="yearLevel" name="yearLevel" required>
+                    <label for="yearLevel">Year Level</label>
+                </div>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">I accept the terms and conditions</label>
+                </div>
+            </div>
+
+            <div class="privacy-text">
+                This school ensures data protection by adhering to relevant privacy laws, applying encryption, and requiring informed consent before any external sharing.
+            </div>
+
+            <div class="form-group">
+                <label for="profilePicture">Upload a profile picture:</label>
+                <input type="file" id="profilePicture" name="profilePicture" accept="image/*">
+                <small style="color: #95a5a6; font-size: 12px;">Optional: Pic to be chosen</small>
+            </div>
+
+            <div class="form-group">
+                <label for="birthdate">Birthdate:</label>
+                <input type="text" id="birthdate" name="birthdate" placeholder="dd/mm/yyyy">
+            </div>
+
+            <div class="form-group">
+                <label for="specialization">Specialization:</label>
+                <select id="specialization" name="specialization" required>
+                    <option value="">Select one</option>
+                    <option value="computer-science">Computer Science</option>
+                    <option value="engineering">Engineering</option>
+                    <option value="business">Business</option>
+                    <option value="arts">Arts</option>
+                    <option value="science">Science</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" name="comments" placeholder="I like coding on the beach..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Basic validation
+            const requiredFields = ['firstName', 'lastName', 'email', 'password'];
+            let isValid = true;
+            
+            requiredFields.forEach(field => {
+                const input = document.getElementById(field);
+                if (!input.value.trim()) {
+                    input.style.borderColor = '#e74c3c';
+                    isValid = false;
+                } else {
+                    input.style.borderColor = '';
+                }
+            });
+            
+            // Check required checkboxes
+            const requiredCheckboxes = ['program', 'yearLevel', 'terms'];
+            requiredCheckboxes.forEach(checkbox => {
+                const input = document.getElementById(checkbox);
+                if (!input.checked) {
+                    input.style.outline = '2px solid #e74c3c';
+                    isValid = false;
+                } else {
+                    input.style.outline = '';
+                }
+            });
+            
+            if (isValid) {
+                alert('Registration submitted successfully!');
+                // Here you would typically send the data to a server
+                console.log('Form data:', new FormData(this));
+            } else {
+                alert('Please fill in all required fields and accept the terms.');
+            }
+        });
+
+        // Real-time validation feedback
+        document.querySelectorAll('input[required], select[required]').forEach(input => {
+            input.addEventListener('blur', function() {
+                if (!this.value.trim()) {
+                    this.style.borderColor = '#e74c3c';
+                } else {
+                    this.style.borderColor = '';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
