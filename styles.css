@@ -5,19 +5,22 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px;
+    padding: 20px;
+    margin: 0;
 }
 
 .form-container {
     background: linear-gradient(145deg, rgba(20, 25, 45, 0.85), rgba(34, 45, 65, 0.85));
     border-radius: 20px;
-    padding: 50px 40px;
+    padding: 40px 30px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
     width: 100%;
     max-width: 550px;
     backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.06);
     transition: all 0.4s ease;
+    box-sizing: border-box;
+    margin: 20px;
 }
 
 .form-container:hover {
@@ -27,22 +30,22 @@ body {
 
 .form-title {
     color: #FFFFFF;
-    font-size: 34px;
+    font-size: 28px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
 }
 
 .form-subtitle {
     color: #bbbfd1;
     text-align: center;
-    margin-bottom: 35px;
-    font-size: 16px;
+    margin-bottom: 30px;
+    font-size: 15px;
     line-height: 1.5;
 }
 
 .form-group {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 input[type="text"],
@@ -52,13 +55,14 @@ input[type="file"],
 select,
 textarea {
     width: 100%;
-    padding: 14px 18px;
+    padding: 12px 16px;
     background: linear-gradient(135deg, rgba(60, 72, 95, 0.65), rgba(44, 62, 80, 0.65));
     border: 2px solid rgba(255, 255, 255, 0.08);
-    border-radius: 12px;
+    border-radius: 10px;
     color: #ffffff;
-    font-size: 15px;
+    font-size: 14px;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 input:focus,
@@ -66,58 +70,61 @@ select:focus,
 textarea:focus {
     border-color: #9b59b6;
     box-shadow: 0 0 12px rgba(155, 89, 182, 0.3);
+    outline: none;
 }
 
 label {
     color: #ecf0f1;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
+    display: block;
 }
 
 input::placeholder,
 textarea::placeholder {
     color: #bfc3d1;
+    opacity: 1;
 }
 
 .checkbox-group {
-    margin: 30px 0 20px;
+    margin: 25px 0 15px;
 }
 
 .checkbox-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 18px;
+    margin-bottom: 15px;
     color: #ecf0f1;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .checkbox-item input[type="checkbox"] {
     margin-right: 10px;
-    margin-top: 4px;
+    margin-top: 2px;
     accent-color: #9b59b6;
 }
 
 .privacy-text {
-    font-size: 14px;
+    font-size: 13px;
     color: #dfe6e9;
     line-height: 1.5;
-    margin-top: 20px;
+    margin-top: 15px;
     text-align: center;
 }
 
 .submit-btn {
     width: 100%;
-    padding: 16px;
+    padding: 14px;
     background: linear-gradient(135deg, #9b59b6, #6c3483);
     color: white;
     border: none;
-    border-radius: 12px;
-    font-size: 17px;
+    border-radius: 10px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
-    margin-top: 30px;
+    margin-top: 25px;
 }
 
 .submit-btn:hover {
@@ -132,31 +139,42 @@ textarea::placeholder {
 
 /* File input */
 input[type="file"] {
-    padding: 12px;
+    padding: 10px;
     cursor: pointer;
 }
 
 /* Custom scrollbar */
 textarea::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 textarea::-webkit-scrollbar-track {
     background: rgba(44, 62, 80, 0.4);
-    border-radius: 4px;
+    border-radius: 3px;
 }
 textarea::-webkit-scrollbar-thumb {
     background: #9b59b6;
-    border-radius: 4px;
+    border-radius: 3px;
 }
 textarea::-webkit-scrollbar-thumb:hover {
     background: #a569bd;
 }
-input[type="file"]::file-selector-button {
-    background: linear-gradient(135deg, #9b59b6, #6c3483);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    padding: 10px 20px;
-    font-size: 15px;
-    cursor: pointer;
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .form-container {
+        padding: 30px 20px;
+        margin: 10px;
+    }
+    
+    .form-title {
+        font-size: 24px;
+    }
+    
+    .form-subtitle {
+        font-size: 14px;
+    }
 }
