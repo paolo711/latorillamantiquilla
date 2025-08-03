@@ -151,3 +151,12 @@ textarea::-webkit-scrollbar-thumb {
 textarea::-webkit-scrollbar-thumb:hover {
     background: #a569bd;
 }
+input[type="file"]::file-selector-button {
+    background: linear-gradient(135deg, #9b59b6, #6c3483);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 10px 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
