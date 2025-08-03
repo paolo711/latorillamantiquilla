@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1B1B33, rgb(39, 39, 63));
+    background: linear-gradient(135deg, #1e1e3f, #2c3e50);
     font-family: 'Arial', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -15,28 +15,29 @@ body {
 }
 
 .form-container {
-    background: rgba(1B1B33);
-    border-radius: 10px;
+    background: linear-gradient(145deg, rgba(27, 27, 51, 0.9), rgba(39, 39, 63, 0.9));
+    border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 15px 35px rgba(141, 129, 129, 0.3);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
     width: 100%;
     max-width: 500px;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .form-title {
-    color: #ecf0f1;
-    font-size: 30px;
+    color: #ffffff;
+    font-size: 32px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 10px;
 }
 
 .form-subtitle {
-    color: #bdc3c7;
+    color: #cccccc;
     text-align: center;
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .form-group {
@@ -58,10 +59,10 @@ select,
 textarea {
     width: 100%;
     padding: 12px 15px;
-    background: rgba(44, 62, 80, 0.8);
-    border: 2px solid rgba(127, 140, 141, 0.3);
-    border-radius: 8px;
-    color: #ecf0f1;
+    background: linear-gradient(135deg, rgba(52, 73, 94, 0.8), rgba(44, 62, 80, 0.8));
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #ffffff;
     font-size: 14px;
     transition: all 0.3s ease;
 }
@@ -73,13 +74,13 @@ input[type="file"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #3498db;
-    box-shadow: 0 0 10px rgba(52, 152, 219, 0.3);
+    border-color: #00aaff;
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #7f8c8d;
+    color: #b2bec3;
 }
 
 .checkbox-group {
@@ -97,7 +98,7 @@ textarea::placeholder {
     margin-right: 10px;
     margin-top: 3px;
     width: auto;
-    accent-color: #3498db;
+    accent-color: #00aaff;
 }
 
 .checkbox-item label {
@@ -109,7 +110,7 @@ textarea::placeholder {
 
 .privacy-text {
     font-size: 14px;
-    color: #ffffff;
+    color: #dfe6e9;
     line-height: 1.4;
     margin-top: 15px;
 }
@@ -124,17 +125,17 @@ select {
 }
 
 select option {
-    background: #34495e;
+    background: #2c3e50;
     color: #ecf0f1;
 }
 
 .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #3498db, #2980b9);
+    background: linear-gradient(135deg, #00aaff, #0066cc);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
@@ -143,16 +144,16 @@ select option {
 }
 
 .submit-btn:hover {
-    background: linear-gradient(135deg, #2980b9, #21618c);
+    background: linear-gradient(135deg, #0099dd, #005bb5);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.3);
 }
 
 .submit-btn:active {
     transform: translateY(0);
 }
 
-/* File input styling */
+/* File input */
 input[type="file"] {
     padding: 10px;
     cursor: pointer;
