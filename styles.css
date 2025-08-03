@@ -5,7 +5,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #1e1e3f, #2c3e50);
+    background: linear-gradient(135deg, #12172A, #2C3E50);
     font-family: 'Arial', sans-serif;
     min-height: 100vh;
     display: flex;
@@ -15,18 +15,18 @@ body {
 }
 
 .form-container {
-    background: linear-gradient(145deg, rgba(27, 27, 51, 0.9), rgba(39, 39, 63, 0.9));
+    background: linear-gradient(145deg, rgba(18, 23, 42, 0.85), rgba(34, 45, 65, 0.85));
     border-radius: 15px;
     padding: 40px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     width: 100%;
     max-width: 500px;
-    backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .form-title {
-    color: #ffffff;
+    color: #FFFFFF;
     font-size: 32px;
     font-weight: bold;
     text-align: center;
@@ -34,14 +34,10 @@ body {
 }
 
 .form-subtitle {
-    color: #cccccc;
+    color: #aaaec4;
     text-align: center;
     margin-bottom: 30px;
     font-size: 15px;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }
 
 label {
@@ -59,8 +55,8 @@ select,
 textarea {
     width: 100%;
     padding: 12px 15px;
-    background: linear-gradient(135deg, rgba(52, 73, 94, 0.8), rgba(44, 62, 80, 0.8));
-    border: 2px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(135deg, rgba(60, 72, 95, 0.7), rgba(44, 62, 80, 0.7));
+    border: 2px solid rgba(255, 255, 255, 0.08);
     border-radius: 10px;
     color: #ffffff;
     font-size: 14px;
@@ -74,13 +70,13 @@ input[type="file"]:focus,
 select:focus,
 textarea:focus {
     outline: none;
-    border-color: #00aaff;
-    box-shadow: 0 0 12px rgba(0, 170, 255, 0.4);
+    border-color: #8e44ad;
+    box-shadow: 0 0 14px rgba(142, 68, 173, 0.4);
 }
 
 input::placeholder,
 textarea::placeholder {
-    color: #b2bec3;
+    color: #aab2bd;
 }
 
 .checkbox-group {
@@ -97,8 +93,8 @@ textarea::placeholder {
 .checkbox-item input[type="checkbox"] {
     margin-right: 10px;
     margin-top: 3px;
+    accent-color: #8e44ad;
     width: auto;
-    accent-color: #00aaff;
 }
 
 .checkbox-item label {
@@ -132,7 +128,7 @@ select option {
 .submit-btn {
     width: 100%;
     padding: 15px;
-    background: linear-gradient(135deg, #00aaff, #0066cc);
+    background: linear-gradient(135deg, #8e44ad, #6c3483);
     color: white;
     border: none;
     border-radius: 10px;
@@ -144,9 +140,9 @@ select option {
 }
 
 .submit-btn:hover {
-    background: linear-gradient(135deg, #0099dd, #005bb5);
+    background: linear-gradient(135deg, #9b59b6, #5b2c6f);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.3);
+    box-shadow: 0 10px 25px rgba(142, 68, 173, 0.4);
 }
 
 .submit-btn:active {
@@ -159,21 +155,18 @@ input[type="file"] {
     cursor: pointer;
 }
 
-/* Custom scrollbar for textarea */
+/* Scrollbar styling */
 textarea::-webkit-scrollbar {
     width: 8px;
 }
-
 textarea::-webkit-scrollbar-track {
     background: rgba(44, 62, 80, 0.5);
     border-radius: 4px;
 }
-
 textarea::-webkit-scrollbar-thumb {
-    background: #7f8c8d;
+    background: #8e44ad;
     border-radius: 4px;
 }
-
 textarea::-webkit-scrollbar-thumb:hover {
-    background: #95a5a6;
+    background: #a569bd;
 }
